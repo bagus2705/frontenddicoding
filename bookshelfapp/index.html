@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="asset/style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <header>
+            <h1>Bookshelf Apps</h1>
+        </header>
+    </div><br>
+    <div class="atas">
+        <div class="form-container">
+            <h2 class="title">Tambah Buku </h2>
+            <form id="formDataBuku" action="" method="post">
+                <div class="input">
+                    <label for="judul">Judul</label>
+                    <input type="text" name="judul" id="judul" placeholder="Judul" required>
+                </div>
+                <div class="row">
+                    <div class="input">
+                        <label for="penulis">Penulis</label>
+                        <input type="text" name="penulis" id="penulis" placeholder="Penulis" required>
+                    </div>
+                    <div class="input">
+                        <label for="tahun">Tahun</label>
+                        <input type="number" name="tahun" id="tahun" placeholder="Tahun" required >
+                    </div>
+                </div>
+                <div class="input_check">
+                    <input type="checkbox" name="isComplete" id="isComplete" placeholder="">
+                    <label for="isComplete">Sudah dibaca</label>
+                </div>
+                <button type="submit" class="submit-btn">Tambahkan</button>
+            </form>
+        </div>
+        <div class="search-container">
+            <h2 class="title">Cari Buku</h2>
+            <form id="bookSearch" action="" method="post">
+                <div class="input">
+                    <input type="text" name="pencarian" id="pencarian" placeholder="Masukkan Judul Buku yang ingin Dicari">
+                </div>
+                <div class="book-search">
+                    <button type="submit" class="search-btn"></i>Cari</button>
+                </div>
+            </form>
+        </div>
+        <div id="overlay"></div>
+
+    </div>
+
+    <div class="bawah">
+        <div class="book-container">
+            <h2 class="title">Buku Belum Selesai Dibaca</h2>
+            <div id="belumDibaca">
+            </div>
+        </div>
+        <div class="book-container">
+            <h2 class="title">Buku Sudah Selesai Dibaca</h2>
+            <div id="sudahDibaca">
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmDialog" class="dialog">
+        <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+        <button id="confirmButton">Ya</button>
+        <button id="cancelButton">Tidak</button>
+    </div>
+
+    <script src="asset/script.js"></script>
+</body>
+
+</html>
